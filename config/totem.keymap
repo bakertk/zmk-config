@@ -61,16 +61,6 @@
             key-positions = <16 17 18>;
         };
 
-        CtrlUp {
-            bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <32 2>;
-        };
-
-        CtrlDown {
-            bindings = <&kp LC(DOWN_ARROW)>;
-            key-positions = <32 12>;
-        };
-
         CtrlLeft {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <32 11>;
@@ -111,7 +101,7 @@
         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
         &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
 &trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &trans     &trans         &trans
+                          &trans    &trans      &trans         &kp RG(L)  &trans         &trans
             >;
         };
 
