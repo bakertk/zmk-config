@@ -72,16 +72,25 @@
         };
     };
 
+    macros {
+        gPCUnlock: gPCUnlock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N0 &kp N3 &kp N2 &kp N1 &kp N0>;
+            label = "GPCUNLOCK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             label = "Base";
             bindings = <
-              &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P
-              &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &lt 4 APOSTROPHE
-                                      &mt LCTRL DEL  &lt 1 TAB     &kp ENTER    &kp SPACE  &lt 2 BSPC   &kp MINUS
+              &kp Q       &kp W       &kp E          &kp R         &kp T            &kp Y      &kp U        &kp I        &kp O       &kp P
+              &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G            &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
+&lt 3 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B            &kp N      &kp M        &kp COMMA    &kp DOT     &kp SLASH           &lt 4 APOSTROPHE
+                                      &mt LCTRL DEL  &lt 1 TAB     &kp BACKSPACE    &kp SPACE  &lt 2 SPACE  &kp MINUS
             >;
         };
 
@@ -98,10 +107,10 @@
         Sym {
             label = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &kp RG(L)  &trans         &trans
+        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET   &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+        &trans    &trans  &trans    &trans      &trans         &gPCUnlock  &trans         &trans           &trans   &trans
+&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER   &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+                          &trans    &trans      &trans         &kp RG(L)   &trans         &trans
             >;
         };
 
