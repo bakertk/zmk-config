@@ -91,6 +91,13 @@
             bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N0 &kp N3 &kp N2 &kp N1 &kp N0 &kp RET>;
             label = "WPCUNLOCK";
         };
+
+        wScreenShot: wScreenShot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(RS(ENTER))>;
+            label = "WSCREENSHOT";
+        };
     };
 
     keymap {
@@ -119,10 +126,10 @@
         Sym {
             label = "Sym";
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET   &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-        &trans    &trans  &trans    &trans      &trans         &wPCUnlock  &gPCUnlock     &trans           &trans   &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER   &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                          &trans    &trans      &trans         &trans      &trans         &kp RG(L)
+        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR    &kp PERCENT    &kp CARET   &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+        &trans    &trans  &trans    &trans        &trans         &wPCUnlock  &gPCUnlock     &trans           &trans   &trans
+&trans  &trans    &trans  &trans    &trans        &trans         &kp UNDER   &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
+                          &trans    &wScreenShot  &trans         &trans      &trans         &kp RG(L)
             >;
         };
 
