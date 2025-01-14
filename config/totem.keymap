@@ -109,10 +109,10 @@
         Nav {
             label = "Nav";
             bindings = <
-            &trans          &trans              &kp UP_ARROW  &trans               &kp LBRC    &kp RBRC   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-            &kp LEFT_SHIFT  &kp LEFT            &kp DOWN      &kp RIGHT            &kp LBKT    &kp RBKT   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp ESCAPE  &trans          &kp LG(LEFT_ARROW)  &trans        &kp LG(RIGHT_ARROW)  &kp LPAR    &kp RPAR   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                                &trans        &trans               &trans      &kp LCTRL  &trans        &kp NUMBER_0
+          &trans          &trans              &kp UP_ARROW    &trans               &kp LBRC    &kp RBRC   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+          &kp LEFT_SHIFT  &kp LEFT            &kp DOWN        &kp RIGHT            &kp LBKT    &kp RBKT   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp CAPS  &trans          &kp LC(LEFT_ARROW)  &kp LEFT_SHIFT  &kp LC(RIGHT_ARROW)  &kp LPAR    &kp RPAR   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                              &trans          &trans               &trans      &kp LCTRL  &kp KP_SLASH  &kp NUMBER_0
             >;
         };
 
