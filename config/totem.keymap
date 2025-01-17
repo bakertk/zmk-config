@@ -138,7 +138,7 @@
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp F1
         &trans  &trans  &trans  &trans  &to 5     &trans  &trans  &trans  &trans  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp F20  &trans
+&trans  &trans  &trans  &trans  &trans  &to 6     &trans  &trans  &trans  &trans  &kp F20  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
@@ -153,7 +153,7 @@
             >;
         };
 
-        Gaming {
+        RocketLeague {
             bindings = <
             &trans  &kp TAB  &trans  &trans     &trans            &to 0   &trans  &trans  &trans  &trans
             &trans  &kp A    &kp W   &kp D      &trans            &trans  &trans  &trans  &trans  &trans
@@ -161,7 +161,17 @@
                              &trans  &kp SPACE  &kp LEFT_SHIFT    &trans  &trans  &trans
             >;
 
-            label = "Gaming";
+            label = "Rocket League";
+        };
+
+        SpiderHeck {
+            label = "SpiderHeck";
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans       &to 0   &trans  &trans  &trans  &trans
+            &trans  &kp A   &kp W   &kp D   &trans       &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &trans  &trans  &kp S   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &kp SPACE    &trans  &trans  &trans
+            >;
         };
 
         Gaming+ {
