@@ -64,6 +64,11 @@
             bindings = <&wScreenshot>;
             key-positions = <33 36>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <33 34>;
+        };
     };
 
     macros {
