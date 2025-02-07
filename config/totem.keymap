@@ -139,10 +139,10 @@
 
         Destiny2 {
             bindings = <
-        &kp NUMBER_2  &kp Q  &kp Z  &kp E   &kp TAB      &to 0   &trans  &trans  &trans  &trans
-        &kp LSHFT     &kp A  &kp W  &kp D   &kp R        &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &kp V  &kp S  &kp N3  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                             &kp F  &kp P   &kp SPACE    &trans  &trans  &trans
+            &kp NUMBER_2  &kp Q  &kp Z  &kp E   &kp TAB      &to 0   &trans  &trans  &trans  &trans
+            &kp LSHFT     &kp A  &kp W  &kp D   &kp R        &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp C         &kp V  &kp S  &kp N3  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                 &kp F  &kp P   &kp SPACE    &trans  &trans  &trans
             >;
         };
 
