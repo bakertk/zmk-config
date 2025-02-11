@@ -44,6 +44,8 @@
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+
+            hold-while-undecided;
         };
     };
 
