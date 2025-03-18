@@ -110,10 +110,10 @@
         Nav {
             display-name = "Nav";
             bindings = <
-            &kp LCTRL           &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LBRC    &kp RBRC      &kp NUMBER_7      &kp NUMBER_8     &kp NUMBER_9  &kp PLUS
-            &kp LC(LEFT_SHIFT)  &kp LEFT            &kp UP_ARROW      &kp RIGHT            &kp LBKT    &kp RBKT      &kp NUMBER_4      &kp NUMBER_5     &kp NUMBER_6  &kp MINUS
-&kp LC(UP)  &kp LEFT_SHIFT      &kp RC(LEFT_ARROW)  &kp DOWN_ARROW    &kp RC(RIGHT_ARROW)  &kp LPAR    &kp RPAR      &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3  &kp SLASH  &kp BACKSLASH
-                                                    &trans            &trans               &trans      &kp KP_EQUAL  &kp SINGLE_QUOTE  &kp KP_NUMBER_0
+            &kp LCTRL           &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LBRC    &kp RBRC   &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+            &kp LC(LEFT_SHIFT)  &kp LEFT            &kp UP_ARROW      &kp RIGHT            &kp LBKT    &kp RBKT   &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp LC(UP)  &kp LEFT_SHIFT      &kp RC(LEFT_ARROW)  &kp DOWN_ARROW    &kp RC(RIGHT_ARROW)  &kp LPAR    &kp RPAR   &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &kp SQT
+                                                    &trans            &trans               &trans      &kp LCTRL  &kp LEFT_SHIFT  &kp NUMBER_0
             >;
         };
 
