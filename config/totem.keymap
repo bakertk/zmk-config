@@ -146,9 +146,9 @@
         Fun {
             label = "Fun";
             bindings = <
-        &bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &kp F1
-        &trans          &bt BT_SEL 1  &trans  &trans  &to 5         &trans  &trans  &trans  &trans  &kp F10
-&trans  &trans          &bt BT_SEL 2  &trans  &trans  &to 6         &trans  &trans  &trans  &trans  &kp F20  &trans
+        &bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &trans  &trans        &trans  &trans  &sys_reset  &trans  &kp F1
+        &trans          &bt BT_SEL 1  &trans  &trans  &to 5         &trans  &trans  &trans      &trans  &kp F10
+&trans  &trans          &bt BT_SEL 2  &trans  &trans  &to 6         &trans  &trans  &trans      &trans  &kp F20  &trans
                                       &trans  &trans  &sys_reset    &trans  &trans  &trans
             >;
         };
