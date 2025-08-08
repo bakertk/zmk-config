@@ -82,7 +82,7 @@
         wPCUnlock: wPCUnlock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N0 &kp N3 &kp N2 &kp N1 &kp N0 &kp RET>;
+            bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N1 &kp N3 &kp N2 &kp N1 &kp N1 &kp RET>;
             label = "WPCUNLOCK";
         };
 
