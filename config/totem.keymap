@@ -85,6 +85,16 @@
             bindings = <&wScreenShot>;
             key-positions = <33 36>;
         };
+
+        alttab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <5 6>;
+        };
+
+        shiftalttab {
+            bindings = <&kp LS(LA(TAB))>;
+            key-positions = <3 4>;
+        };
     };
 
     macros {
