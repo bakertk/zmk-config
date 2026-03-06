@@ -1,85 +1,53 @@
-# eiga's zmk-config
+# Hillside ZMK firmware
 
-### Table of contents
-- Branches
-    - [Corne](#corne)
-    - [Charybdis](#charybdis)
-        - [Module documentation](#module-documentation)
-    - [TOTEM](#totem)
-- [Dongle Flashing](#dongle-flashing)
-- [ZMK Keymap Editor](#zmk-keymap-editor)
-- [Shops and Useful links](#shops-and-other-useful-links)
+![hillside](https://imgur.com/emWDXiT.png)
+[![Build](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml)
 
-## Hello
+This is the [ZMK](https://zmk.dev/docs) firmware
+ for the [Hillside](https://github.com/mmccoyd/hillside) family of split ergonomic keyboards.
 
-You probably reached this page by watching one of these [Ergo Split Keyb Videos](https://www.youtube.com/playlist?list=PL1E2ddJCbc13DvCGYXX9jVVX1BqNGKE5D).
+It contains keymap definition files for three boards in [./config](./config):
 
-This repository hosts zmk-configs as seen in the YouTube videos linked above.
+ - Hillside 52 with 3x6+3+5 keys
+ - Hillside 48 with 3x6+1+5 keys
+ - Hillside 46 with 3x6+5 keys
 
-Additionally, this repository contains alternative configurations meant to be used with an extra controller acting as a dongle. Pease refer to the [Dongle Flashing](https://github.com/eigatech/zmk-config#dongle-flashing) chapter for instructions.
+Pushing changes will build all the keyboards. You need to be signed in to a GitHub account to push changes and build the firmware. To not waste build time, comment out the keyboards in [./build.yaml](./build.yaml) that you do not have.
 
-> [!NOTE]  
-> These configurations are meant to be used with builds that are identical to the ones featured in the videos, otherwise they should be used as reference only.
+To build the firmware:
 
-## Corne
+- Fork this repo on GitHub
+- Clone your fork locally
+- Trigger a build:
+  - Make a trivial change to ./build.yaml (or any non *.md file)
+  - Push that change
+- Look in the [Actions](https://github.com/mmccoyd/zmk-config/actions) tab
+     for the build triggered by that change. 
+- Wait for the build to finish
+- Click on the build link next to the green checkbox
+- Download the artifact file with the firmware
+- See [Installing The Firmware](https://zmk.dev/docs/user-setup#installing-the-firmware)
+  for more details from there.
 
-- [Corne](https://github.com/eigatech/zmk-config/tree/corne)
-- [Corne Dongle](https://github.com/eigatech/zmk-config/tree/corne-dongle)
+*Once* your board works with the default firmware,
+  you can modify the keymap.
+Your copies of the default Hillside keymaps are in:
 
-> [!NOTE]  
-> Shield is configured for an earlier revision of Pete Johanson's [Corne Ultralight PCB](https://github.com/petejohanson/crkbd/tree/board/corne-ultralight), with nice!view support.
+- [./config/hillside52.keymap](./config/hillside52.keymap)
+- [./config/hillside48.keymap](./config/hillside48.keymap)
+- [./config/hillside46.keymap](./config/hillside46.keymap)
 
-## Charybdis
+Modify those as needed. Pushing the change will trigger a build as above.
 
-- [Charybdis](https://github.com/eigatech/zmk-config/tree/charybdis-3.5)
-- [Charybdis Dongle](https://github.com/eigatech/zmk-config/tree/charybdis-dongle)
+If you want to enable features,
+  modify the appropriate ./config/hillside*.conf file.
 
-### Module documentation
+To add RGB support, uncomment the lines in the ./config/hillside*.conf file
+  and add the ```&rgb_ug RGB_TOG``` and other keycodes to the keymap adjust layer.
+While RGB is disabled, any RGB control keys
+  behave as transparent keys and activate keys on lower layers,
+  which can be confusing.
 
-- Charybdis
-    - [ZMK PMW3610 Driver](https://github.com/inorichi/zmk-pmw3610-driver)
-- Charybdis Dongle
-    - [ZMK Split Peripheral Input Relay](https://github.com/badjeff/zmk-split-peripheral-input-relay)
-    - [ZMK Input Behavior Listener](https://github.com/badjeff/zmk-input-behavior-listener)
-    - [ZMK PMW3610 Driver](https://github.com/badjeff/zmk-pmw3610-driver)
+The Hillside shield definition files should *not* need to be modified and are in ./config/boards/shields.
 
-> [!NOTE]  
-> Charybdis uses Inorichi's PMW3610 driver, while Charybdis Dongle leverages multiple modules written by badjeff.
-
-## TOTEM
-
-- [TOTEM](https://github.com/eigatech/zmk-config/tree/totem)
-- [TOTEM Dongle](https://github.com/eigatech/zmk-config/tree/totem-dongle)
-- [TOTEM Prospector](https://github.com/eigatech/zmk-config/tree/totem-prospector)
-
-## Dongle Flashing
-
-Dongle configs use Seeed Xiao Ble microcontrollers housed in a nifty 3D printed [case](https://www.printables.com/model/522586-seeed-xiao-ble-case).
-
-1. Turn all controllers off
-2. Flash the dongle controller with the **appropriate** `settings_reset` file.
-3. Flash the dongle controller with the `dongle` file.
-4. Flash the first half with the the `settings_reset` file.
-5. Flash the first half with the `left` or `right` files.
-6. Repeat steps 4 and 5 for the other half.
-
-> [!WARNING]  
-> When using both Nice!Nano and Seeed XIAO microcontrollers, make sure you are flashing them with the correct files!
-
-## ZMK Keymap Editor
-
-Nick Coutsos' [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/) is a user-friendly, browser-based WYSIWYG app designed to make editing your keymap file easier. It supports conditional layers, behaviors, combo and macro editing, rotary encoders, and more.
-
-## Shops and other useful links
-
-Kits, Prebuilts, Parts:
-- [kbd.news](https://kbd.news/vendors) - mechanical keyboard vendors list
-- [42keebs.eu](http://42keebs.eu/) - diy kits, including Corne, switches and other parts
-- [keeb.supply](https://keeb.supply/) - diy kits and prebuilts, including TOTEM, tools and other parts
-- [splitkb.com](https://splitkb.com/) - diy kits, including Corne, switches, tools and other parts
-- [bastardkb.com](https://bastardkb.com/) - diy kits and prebuilts, including Charybdis (wired only w/ qmk)
-- [typeractive.xyz](https://typeractive.xyz/) - diy kits and prebuilts, including Corne w/ nice!views, switches, tools and other parts
-
-Documentation and guides:
-- [ZMK Firmware Documentation](https://zmk.dev/docs)
-- [Eren's Wireless Charybdis Mini Guide](https://github.com/erenatas/charybdis-wireless-3x6)
+More information about each keymap is in their readme files.
