@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2021-2022 The ZMK Contributors
+ * Copyright (c) 2021 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside46.dtsi" 
+#include "hillside48.dtsi" 
 
 &kscan0 {
     col-gpios
@@ -15,8 +15,4 @@
         , <&pro_micro 16 GPIO_ACTIVE_HIGH> // col4 in the schematic
         , <&pro_micro 10 GPIO_ACTIVE_HIGH> // col5 in the schematic
         ;
-};
-
-&left_encoder {
-    status = "okay";
 };

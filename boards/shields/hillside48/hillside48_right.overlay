@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2021-2022 The ZMK Contributors
+ * Copyright (c) 2021 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside52.dtsi" 
+#include "hillside48.dtsi" 
 
 &default_transform {
     col-offset = <6>;
@@ -19,8 +19,4 @@
         , <&pro_micro 18 GPIO_ACTIVE_HIGH> // col1 in the schematic
         , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col0 in the schematic
         ;
-};
-
-&right_encoder {
-    status = "okay";
 };
