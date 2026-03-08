@@ -1,0 +1,23 @@
+# Archive folder - old/experimental configs
+archive/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+.west/
+
+# Backup files
+*.backup
+*.bak
+
+.zmk/

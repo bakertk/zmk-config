@@ -1,25 +1,16 @@
-# This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
-#
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#
----
 include:
+# Settings reset builds - flash these first if having pairing issues
+# - board: nice_nano/nrf52840
+#   shield: settings_reset
 
-# Hillside 46
-#   Comment out below if you do not have this board, to save build time
-#  - board: nice_nano_v2
-#    shield: hillside46_left
-#  - board: nice_nano_v2
-#    shield: hillside46_right
+# - board: nice_nano@2.0.0
+#   shield: settings_reset
+# - board:  nrfmicro@1.1.0/nrf52840/flipped
+#   shield: settings_reset
+# - shield: cradio_left
+#   board: nice_nano
+# - shield: cradio_right
+#   board: nice_nano
 
 # Hillside 48 - Using generic_3x6 + extras
 - board: nice_nano/nrf52840
@@ -28,10 +19,49 @@ include:
 - board: nice_nano/nrf52840
   shield: hillside48_right
 
-#
-# Hillside 52
-#   Comment out below if you do not have this board, to save build time
-#  - board: nice_nano_v2
-#    shield: hillside52_left
-#  - board: nice_nano_v2
-#    shield: hillside52_right
+# A_dux - Using generic_3x5 and zmk
+# Om - uses this also
+# - board: nice_nano/nrf52840
+#   shield: a_dux_left
+#   snippet: studio-rpc-usb-uart
+#   cmake-args: -DCONFIG_ZMK_STUDIO=y
+# - board: nice_nano/nrf52840
+#   shield: a_dux_right
+
+# A_dux - Using generic_3x5 and zmk
+# Om - uses this also
+# - board: nice_nano_v2
+#   shield: a_dux_left
+# - board: nice_nano_v2
+#   shield: a_dux_right
+# # HyperGarlic - Using generic_3x5 (no Studio support in shield) Sold
+# May not work wired
+  # - board: nice_nano/nrf52840
+  #   shield: hypergarlic_left
+  # - board: nice_nano/nrf52840
+  #   shield: hypergarlic_right
+
+# # Kaz - Using generic_3x5 with custom shield (wired split) Sold
+# - board: nice_nano/nrf52840
+#   shield: kaz_left
+#   snippet: studio-rpc-usb-uart
+# - board: nice_nano/nrf52840
+#   shield: kaz_right
+
+# # Cradio
+# # HyperGoliic - Sold
+# # Sweep
+# # # New board naming
+# - board: nice_nano/nrf52840
+#   shield: cradio_left
+#   snippet: studio-rpc-usb-uart
+#   cmake-args: -DCONFIG_ZMK_STUDIO=y
+# - board: nice_nano/nrf52840
+#   shield: cradio_right
+
+# HyperGolic - Bluetooth split keyboard Sold
+# Does not work Q/B switched
+# - board: nice_nano/nrf52840
+#   shield: hypergolic_left
+# - board: nice_nano/nrf52840
+#   shield: hypergolic_right

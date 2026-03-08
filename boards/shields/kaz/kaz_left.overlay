@@ -1,0 +1,27 @@
+/*
+ * Kaz Left Half - 3x5 split with 3 thumb keys
+ * 
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "kaz.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 2 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        ;
+};
+
+&default_transform {
+    col-offset = <0>;
+};
+
+// Map the 6 physical columns to the 10-column transform
+// Physical COL0 (outer) is not used in keymap
+// Physical COL1-5 map to transform columns 1-5
+// Physical COL0-5 on right map to transform columns 6-10 (with col-offset)

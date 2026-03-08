@@ -1,0 +1,19 @@
+
+if SHIELD_CRADIO36_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "HyperGolic"
+
+endif
+
+if SHIELD_CRADIO36_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "HyperGolic"
+
+endif
+
+config ZMK_KSCAN_DIRECT_POLLING
+	default y
+
+
