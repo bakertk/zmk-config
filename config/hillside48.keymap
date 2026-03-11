@@ -39,6 +39,15 @@
         };
     };
 
+    macros {
+        workunlock: workunlock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N1 &kp N3 &kp N2 &kp N1 &kp N1 &kp RET>;
+            label = "WORKUNLOCK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -76,16 +85,16 @@
 
         symbols {
             bindings = <
-&none                                                                                                   &none
-&none            &none                                                                           &none  &none
-&none            &kp AT_SIGN  &kp POUND                                           &kp ASTERISK   &none  &none
-&none            &none        &none                                               &none          &none  &none
-&none            &none        &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &none  &none
-&none            &none                                                                           &none  &none
-&none            &none                                                                           &none  &none
-&none                                                                                                   &none
-&kp EXCLAMATION  &none        &none       &none        &none    &none  &none      &none          &none  &none
-&none                                                                                                   &none
+&none                                                                                                         &none
+&none            &none                                                                           &none        &none
+&none            &kp AT_SIGN  &kp POUND                                           &kp ASTERISK   &none        &none
+&none            &none        &none                                               &none          &none        &none
+&none            &none        &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPERSAND  &none        &none
+&none            &none                                                                           &workunlock  &none
+&none            &none                                                                           &none        &none
+&none                                                                                                         &none
+&kp EXCLAMATION  &none        &none       &none        &none    &none  &none      &none          &none        &none
+&none                                                                                                         &none
             >;
         };
 
