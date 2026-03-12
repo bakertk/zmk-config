@@ -25,17 +25,17 @@
 
         enterrrr {
             bindings = <&kp ENTER>;
-            key-positions = <29 15>;
+            key-positions = <19 20>;
         };
 
         bangit {
             bindings = <&kp F5>;
-            key-positions = <40 41>;
+            key-positions = <40 43>;
         };
 
         capslock {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <44 37>;
+            key-positions = <45 38>;
         };
 
         combo_unlock {
