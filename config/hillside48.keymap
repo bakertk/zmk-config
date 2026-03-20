@@ -81,7 +81,7 @@
 &kp ESC     &kp Q      &kp W      &kp E      &kp R          &kp T   &kp Y      &kp U        &kp I      &kp O      &kp P      &kp EQUAL
 &caps_word  &kp A      &kp S      &kp D      &kp F          &kp G   &kp H      &kp J        &kp K      &kp L      &kp SEMI   &kp APOS
 &kp LGUI    &kp Z      &kp X      &kp C      &kp V          &kp B   &to 1      &to 2        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp BSLH
-&sl 4       &kp LCTRL  &kp LSHFT  &lt 1 TAB  &kp BACKSPACE          &kp SPACE  &lt 2 MINUS  &kp RSHFT  &kp LCTRL  &sl 3
+&mo 4       &kp LCTRL  &kp LSHFT  &lt 1 TAB  &kp BACKSPACE          &kp SPACE  &lt 2 MINUS  &kp RSHFT  &kp LCTRL  &sl 3
             >;
         };
 
