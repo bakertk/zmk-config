@@ -44,6 +44,13 @@
             bindings = <&studio_unlock>;
             layers = <0>;
         };
+
+        combo_swapper {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&swapper>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -51,7 +58,7 @@
             compatible = "zmk,behavior-smart-toggle";
             #binding-cells = <0>;
             bindings = <&kp LALT>, <&kp TAB>;
-            ignored-key-positions = <1>;
+            ignored-key-positions = <6 7 38 45>;  // combo keys (Y, U) + shift keys for reverse tabbing
         };
     };
 
