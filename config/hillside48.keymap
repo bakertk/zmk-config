@@ -48,10 +48,10 @@
 
     behaviors {
         swapper: swapper {
-            compatible = "zmk,behavior-smart-toggle";
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
             #binding-cells = <0>;
-            bindings = <&kp LALT>, <&kp TAB>;
-
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
             ignored-key-positions = <6 7 40 45>;  // combo keys (Y, U) + shift keys for reverse tabbing
         };
     };
