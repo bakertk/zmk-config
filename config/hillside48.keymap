@@ -143,9 +143,9 @@
 
         bluetooth {
             bindings = <
-&bt BT_CLR      &none  &none  &none  &none  &bt_switch_0  &none  &none  &none  &none  &none  &none
-&none           &none  &none  &none  &none  &bt_switch_1  &none  &none  &none  &none  &none  &none
-&bt BT_CLR_ALL  &none  &none  &none  &none  &bt_switch_2  &none  &none  &none  &none  &none  &none  &none  &none
+&bt BT_CLR      &none  &none  &none  &bt BT_DISC 0  &bt_switch_0  &none  &none  &none  &none  &none  &none
+&none           &none  &none  &none  &bt BT_DISC 1  &bt_switch_1  &none  &none  &none  &none  &none  &none
+&bt BT_CLR_ALL  &none  &none  &none  &bt BT_DISC 2  &bt_switch_2  &none  &none  &none  &none  &none  &none  &none  &none
 &none           &none  &none  &none  &none  &none         &none  &none  &none  &none
             >;
         };
