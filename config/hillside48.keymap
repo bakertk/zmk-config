@@ -80,7 +80,7 @@
             bindings
                 = <&bt BT_DISC 1>
                 , <&bt BT_DISC 2>
-                , <&macro_wait_time 500>
+                , <&macro_wait_time 1000>
                 , <&bt BT_SEL 0>
                 ;
         };
@@ -92,7 +92,7 @@
             bindings
                 = <&bt BT_DISC 0>
                 , <&bt BT_DISC 2>
-                , <&macro_wait_time 500>
+                , <&macro_wait_time 1000>
                 , <&bt BT_SEL 1>
                 ;
         };
@@ -104,7 +104,7 @@
             bindings
                 = <&bt BT_DISC 0>
                 , <&bt BT_DISC 1>
-                , <&macro_wait_time 500>
+                , <&macro_wait_time 1000>
                 , <&bt BT_SEL 2>
                 ;
         };
