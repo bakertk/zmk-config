@@ -45,6 +45,11 @@
             bindings = <&swapper>;
             layers = <0>;
         };
+
+        Screenshot {
+            bindings = <&wScreenshot>;
+            key-positions = <46 39>;
+        };
     };
 
     behaviors {
