@@ -57,6 +57,7 @@
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
             ignored-key-positions = <5 6 13 16 37>;  // combo keys (Y, U) + shift keys for reverse tabbing
         };
     };
@@ -113,18 +114,18 @@
             label = "GPCUNLOCK";
         };
 
-        wPCUnlock: wPCUnlock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N1 &kp N3 &kp N2 &kp N1 &kp N1 &kp RET>;
-            label = "WPCUNLOCK";
-        };
-
         wScreenShot: wScreenShot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RC(RS(ENTER))>;
             label = "WSCREENSHOT";
+        };
+
+        wPCUnlock: wPCUnlock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(R) &kp E &kp N &kp N &kp A &kp T &kp R &kp E &kp K &kp A &kp B &kp N0 &kp N3 &kp N2 &kp N1 &kp N0 &kp N0 &kp RET>;
+            label = "WPCUNLOCK";
         };
     };
 
